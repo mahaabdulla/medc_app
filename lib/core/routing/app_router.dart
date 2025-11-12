@@ -1,0 +1,40 @@
+import 'package:flutter/material.dart';
+import 'package:medbok/core/routing/routes.dart';
+import 'package:medbok/features/login/views/login_screen.dart';
+import 'package:medbok/features/onboarding/onboarding_screen.dart';
+
+class AppRouter {
+  Route<dynamic>? generateRoute(RouteSettings settings) {
+    switch (settings.name) {
+      case Routes.onBoarding:
+        return MaterialPageRoute(
+          builder: (_) => const OnBoardingScreen(),
+          settings: settings,
+        );
+
+      case Routes.loginScree:
+        return MaterialPageRoute(
+          builder: (_) => const LoginScreen(),
+          settings: settings,
+        );
+
+      // case Routes.HomeScreen:
+      //   return MaterialPageRoute(
+      //     builder: (_) => const HomeScreen(),
+      //     settings: settings,
+      //   );
+
+      default:
+        return _undefinedRoute(settings);
+    }
+  }
+
+  Route<dynamic> _undefinedRoute(RouteSettings settings) {
+    return MaterialPageRoute(
+      builder: (_) => Scaffold(
+        appBar: AppBar(title: const Text('Page Not Found')),
+        body: Center(child: Text('No Route Definde For: ${settings.name}')),
+      ),
+    );
+  }
+}

@@ -1,0 +1,5 @@
+import 'package:flutter/cupertino.dart';
+
+class ColorsManager {
+  static const Color mainBlue = Color(0XFF247CFF);
+}
