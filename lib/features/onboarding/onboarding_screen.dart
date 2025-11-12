@@ -16,6 +16,7 @@ class OnBoardingScreen extends StatelessWidget {
             child: Column(
               children: [
                 const MedbokLogoAndName(),
+                SizedBox(height: 10.h),
                 const MedbokImageAndText(),
                 //
               ],
