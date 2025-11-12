@@ -5,6 +5,8 @@ import 'package:medbok/features/onboarding/onboarding_screen.dart';
 
 class AppRouter {
   Route<dynamic>? generateRoute(RouteSettings settings) {
+    // this arguments used to pass in any screen like this (arrgument ClassName)
+    final arguments = settings.arguments;
     switch (settings.name) {
       case Routes.onBoarding:
         return MaterialPageRoute(
@@ -32,7 +34,6 @@ class AppRouter {
   Route<dynamic> _undefinedRoute(RouteSettings settings) {
     return MaterialPageRoute(
       builder: (_) => Scaffold(
-        appBar: AppBar(title: const Text('Page Not Found')),
         body: Center(child: Text('No Route Definde For: ${settings.name}')),
       ),
     );
