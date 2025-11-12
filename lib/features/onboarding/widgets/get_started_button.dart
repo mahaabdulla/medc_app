@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:medbok/core/helpers/extentions.dart';
+import 'package:medbok/core/routing/routes.dart';
 import 'package:medbok/core/theming/colors.dart';
 import 'package:medbok/core/theming/styles.dart';
 
@@ -20,7 +22,7 @@ class GetStartedButton extends StatelessWidget {
       ),
 
       onPressed: () {
-        //TODO ON TAP LOGIC
+        context.pushNamed(Routes.loginScree);
       },
       child: Text('Get Started', style: AppTextStyles.font16WhiteSemiBokd),
     );
