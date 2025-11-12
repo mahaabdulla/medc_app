@@ -32,7 +32,6 @@ class AppRouter {
   Route<dynamic> _undefinedRoute(RouteSettings settings) {
     return MaterialPageRoute(
       builder: (_) => Scaffold(
-        appBar: AppBar(title: const Text('Page Not Found')),
         body: Center(child: Text('No Route Definde For: ${settings.name}')),
       ),
     );
