@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:medbok/features/onboarding/widgets/medbok_image_and_text.dart';
 import 'package:medbok/features/onboarding/widgets/medbok_logo_and_name.dart';
 
 class OnBoardingScreen extends StatelessWidget {
@@ -12,7 +13,13 @@ class OnBoardingScreen extends StatelessWidget {
         child: SingleChildScrollView(
           child: Padding(
             padding: EdgeInsets.only(top: 30.h, bottom: 30.h),
-            child: Column(children: [MedbokLogoAndName(), Text("hhhiii")]),
+            child: Column(
+              children: [
+                const MedbokLogoAndName(),
+                const MedbokImageAndText(),
+                //
+              ],
+            ),
           ),
         ),
       ),
