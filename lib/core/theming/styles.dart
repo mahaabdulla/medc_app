@@ -14,10 +14,14 @@ class AppTextStyles {
     color: ColorsManager.mainBlue,
     fontWeight: FontWeight.bold,
   );
-
-  static TextStyle font20PrimaryBold(Color primaryColor) => TextStyle(
-    fontSize: 20.sp,
-    color: primaryColor,
-    fontWeight: FontWeight.bold,
+  static TextStyle font16WhiteSemiBokd = TextStyle(
+    fontSize: 16.sp,
+    color: Colors.white,
+    fontWeight: FontWeight.w700,
+  );
+  static TextStyle font13GeryReguler = TextStyle(
+    fontSize: 13.sp,
+    color: ColorsManager.gery,
+    fontWeight: FontWeight.normal,
   );
 }
