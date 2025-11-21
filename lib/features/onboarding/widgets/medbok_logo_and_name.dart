@@ -13,7 +13,7 @@ class MedbokLogoAndName extends StatelessWidget {
       children: [
         SvgPicture.asset('assets/svg/app_logo.svg', width: 50.w, height: 50.h),
         SizedBox(width: 10.w),
-        Text('MedBok', style: AppTextStyles.font24Black70Weight),
+        Text('MedBok', style: TextStyles.font24BlueBold),
       ],
     );
   }

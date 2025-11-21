@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:medbok/core/helpers/extentions.dart';
-import 'package:medbok/core/routing/routes.dart';
 import 'package:medbok/core/theming/colors.dart';
 import 'package:medbok/core/theming/styles.dart';
 
-class GetStartedButton extends StatelessWidget {
-  const GetStartedButton({super.key});
+class AppTextButton extends StatelessWidget {
+  final String text;
+  final VoidCallback onPressed;
+  const AppTextButton({super.key, required this.text, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -20,12 +20,9 @@ class GetStartedButton extends StatelessWidget {
           ),
         ),
       ),
-
-      onPressed: () {
-        context.pushNamed(Routes.loginScree);
-      },
-      child: Text('Get Started', style: TextStyles.font16WhiteSemiBold
-      ),
-    );
+      onPressed: () { 
+      
+      // TODO add onPressed logic
+     }, child: Text(text, style: TextStyles.font16WhiteSemiBold),);
   }
 }
