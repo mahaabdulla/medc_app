@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:medbok/core/networking/api_constants.dart';
 import 'package:medbok/features/login/data/models/login_response.dart';
+import 'package:medbok/features/login/data/models/login_request_body.dart';
 import 'package:retrofit/retrofit.dart';
 
 part 'api_service.g.dart';
@@ -11,5 +12,5 @@ abstract class ApiService {
 
   @POST(ApiConstants.loginEndpoint)
   Future<LoginResponse> login(
-    @Body() LoginResponseBody loginResponseBody);
+    @Body() LoginRequestBody loginRequestBody);
 }

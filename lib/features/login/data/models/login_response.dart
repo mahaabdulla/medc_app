@@ -10,7 +10,8 @@ class LoginResponse {
   bool ? status;
   int? code;
 
-  LoginResponse({this.message,
+  LoginResponse({
+    this.message,
    this.userData,
     this.status, 
     this.code});
