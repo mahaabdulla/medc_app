@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:medbok/core/di/dependency_injection.dart';
 import 'package:medbok/core/routing/routes.dart';
+import 'package:medbok/features/login/view_model/cubit/login_cubit.dart';
 import 'package:medbok/features/login/views/login_screen.dart';
 import 'package:medbok/features/onboarding/onboarding_screen.dart';
 
@@ -16,7 +19,10 @@ class AppRouter {
 
       case Routes.loginScree:
         return MaterialPageRoute(
-          builder: (_) => const LoginScreen(),
+          builder: (_) => BlocProvider(
+            create: (context) => getIt<LoginCubit >(),
+            child: const LoginScreen(),
+          ),
           settings: settings,
         );
 
